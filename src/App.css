@@ -1,3 +1,63 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap");
+
+.pokemon {
+  width: 50%;
+  display: grid;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  font-family: "Jost", sans-serif;
+  grid-template-areas:
+    "number name"
+    "image image"
+    "meta types"
+    "body class";
+}
+
+.bar1 {
+  position: relative;
+  height: 3px;
+  background-color: gray;
+  transition: 0.3;
+}
+
+.pokemon__number {
+  grid-area: number;
+  font-size: 35px;
+  margin: -25px 0 -25px 0;
+  padding: -20px;
+}
+
+.number {
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 55px;
+  padding: 0 15px 0 5px;
+}
+
+.pokemon__name {
+  grid-area: name;
+  font-size: 35px;
+  margin: -25px 0 -25px 0;
+}
+
+.pokemon__image {
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+.pokemon__meta {
+  grid-area: meta;
+}
+
+.pokemon__types {
+  grid-area: types;
+}
+
+.pokemon__class {
+  grid-area: class;
 }

@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@apollo/react-hooks";
+import { Pokemon } from "../components/Pokemon";
 import { GET_POKEMONS } from "../graphql/get-pokemons";
 
 export function PokedexContainer() {
-  const [currPokemon, setCurrPokemon] = useState("");
-
   const { data: { pokemons = [] } = {} } = useQuery(GET_POKEMONS, {
-    variables: { first: 9 },
+    variables: { first: 151 },
   });
 
-  function nextPokemon() {
-    setCurrPokemon(pokemons[0].name);
-  }
-
+  console.log(pokemons);
   return (
-    <div>
-      <button onClick={nextPokemon}>Click</button>
-      <span>{currPokemon}</span>
+    <div className="container">
+      {pokemons &&
+        pokemons.map((pokemon) => (
+          <Pokemon key={pokemon.id} pokemon={pokemon} />
+        ))}
     </div>
   );
 }

@@ -6,7 +6,16 @@ export const GET_POKEMONS = gql`
       id
       name
       number
+      image
       maxHP
+      maxCP
+      weight {
+        maximum
+      }
+      height {
+        maximum
+      }
+      classification
     }
   }
 `;
