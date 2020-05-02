@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@600&family=Roboto+Mono:wght@700&display=swap");
 
 .pokemon {
   width: 50%;
   display: grid;
   margin: auto;
   margin-bottom: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-radius: 10px;
   font-family: "Jost", sans-serif;
   grid-template-areas:
     "number name"
@@ -26,11 +27,12 @@
   font-size: 35px;
   margin: -25px 0 -25px 0;
   padding: -20px;
+  font-family: "Roboto Mono", monospace;
 }
 
 .number {
   margin-left: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 15px;
   width: 55px;
   padding: 0 15px 0 5px;
@@ -47,11 +49,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 20px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 200px;
 }
 
 .pokemon__meta {
   grid-area: meta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.pokemon__body {
+  grid-area: body;
+  margin: 0px;
+  text-align: center;
 }
 
 .pokemon__types {

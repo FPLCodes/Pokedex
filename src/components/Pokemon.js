@@ -14,40 +14,52 @@ export function Pokemon({ pokemon }) {
         <p>{pokemon.name}</p>
       </div>
       <div className="pokemon__image">
-        <img src={pokemon.image} alt={pokemon.name} width="150px" />
+        <img src={pokemon.image} alt={pokemon.name} width="190px" />
       </div>
       <div className="pokemon__meta">
-        <span>Max HP: {pokemon.maxHP}</span>
-        <div
-          style={{ height: "3px", width: "100px", border: "1px solid black" }}
-          className="HP-border"
-        >
-          <div
-            style={{ height: "3px", width: HP, backgroundColor: "gray" }}
-            className="HP"
-          ></div>
-          <span>Max CP: {pokemon.maxCP}</span>
+        <div className="pokemon__HP">
+          <span>Max HP: {pokemon.maxHP}</span>
           <div
             style={{ height: "3px", width: "100px", border: "1px solid black" }}
             className="HP-border"
           >
             <div
-              style={{ height: "3px", width: CP, backgroundColor: "gray" }}
+              style={{ height: "3px", width: HP, backgroundColor: "gray" }}
               className="HP"
             ></div>
+          </div>
+          <div className="pokemon__CP">
+            <span>Max CP: {pokemon.maxCP}</span>
+            <div
+              style={{
+                height: "3px",
+                width: "100px",
+                border: "1px solid black",
+              }}
+              className="HP-border"
+            >
+              <div
+                style={{ height: "3px", width: CP, backgroundColor: "gray" }}
+                className="HP"
+              ></div>
+            </div>
           </div>
         </div>
         <br />
       </div>
       <div className="pokemon__body">
-        <p>Weight: {pokemon.weight.maximum}</p>
-        <p>Height: {pokemon.height.maximum}</p>
+        <div className="weight">
+          <p>Weight: {pokemon.weight.maximum}</p>
+        </div>
+        <div className="height">
+          <p>Height: {pokemon.height.maximum}</p>
+        </div>
       </div>
       <div className="pokemon__types">
-        <p>{pokemon.name}</p>
+        <p>Type: {pokemon.types[0]}</p>
       </div>
       <div className="pokemon__class">
-        <p>{pokemon.classification}</p>
+        <p>Class: {pokemon.classification}</p>
       </div>
     </div>
   );
