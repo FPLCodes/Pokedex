@@ -1,12 +1,17 @@
 import React from "react";
 import "./App.css";
-import Pokedex from "./main/Pokedex";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-hooks";
+import { PokedexContainer } from "./container/PokedexContainer";
 
 function App() {
+  const client = new ApolloClient({
+    uri: "https://graphql-pokemon.now.sh/",
+  });
   return (
-    <div className="App">
-      <Pokedex />
-    </div>
+    <ApolloProvider client={client}>
+      <PokedexContainer />
+    </ApolloProvider>
   );
 }
 
