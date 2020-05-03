@@ -33,7 +33,7 @@ body {
 /* ====================== MAIN BODY ========================= */
 
 .pokemon {
-  width: 470px;
+  width: 460px;
   display: grid;
   margin: 15px auto 15px auto;
   border: 3px solid rgb(32, 32, 32);
