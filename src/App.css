@@ -1,21 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@600&family=Roboto+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Jost:wght@600&family=Roboto+Mono:wght@700&display=swap");
 
 body {
   background-color: rgb(243, 243, 145);
 }
 
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pokeball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====================== MAIN BODY ========================= */
+
 .pokemon {
-  width: 500px;
+  width: 470px;
   display: grid;
   margin: 15px auto 15px auto;
   border: 3px solid rgb(32, 32, 32);
   border-radius: 25px;
-  font-family: "Jost", sans-serif;
+  font-family: "Quicksand", sans-serif;
   background-color: rgb(235, 63, 57);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   color: white;
-  -webkit-text-stroke: 0.2px black;
   grid-template-areas:
     "name name"
     "image image"
@@ -28,8 +55,8 @@ body {
 }
 
 .blue-circle {
-  width: 45px;
-  height: 45px;
+  width: 43px;
+  height: 43px;
   background-color: rgb(24, 192, 243);
   border: 2px solid white;
   border-radius: 50%;
@@ -46,14 +73,14 @@ body {
 }
 
 .number {
-  margin-top: 48px;
+  margin-top: 47px;
   padding: 5px;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .name {
-  font-size: 35px;
+  font-size: 33px;
   margin-left: 15px;
 }
 
@@ -89,21 +116,21 @@ img {
 }
 
 .border {
-  height: 5px;
+  height: 6px;
   width: 200px;
-  border: 2px solid rgb(31, 31, 31);
+  margin-top: 5px;
   border-radius: 10px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  background-color: rgb(255, 129, 129);
   transition: 0.3;
 }
 
 .bar {
   position: relative;
-  width: 0px;
-  height: 5px;
+  height: 6px;
   border-radius: 10px;
   background-color: rgb(102, 243, 113);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3;
 }
 
@@ -112,7 +139,7 @@ img {
 
 .pokemon__body {
   grid-area: body;
-  margin: auto;
+  margin: 10px auto -10px auto;
   margin-top: 5px;
   text-align: center;
 }
@@ -127,7 +154,7 @@ img {
 .pokemon__class {
   grid-area: class;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -138,3 +165,5 @@ img {
   width: 150px;
   text-align: center;
 }
+
+/* ====================== MAIN BODY ========================= */
