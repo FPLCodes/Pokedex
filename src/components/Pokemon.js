@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../App.css";
 
 export function Pokemon({ pokemon }) {
@@ -16,14 +16,14 @@ export function Pokemon({ pokemon }) {
         <img src={pokemon.image} alt={pokemon.name} width="180px" />
       </div>
 
-      <div className="pokemon__HP" className="meta">
+      <div className="pokemon__HP">
         <span>Max HP: {pokemon.maxHP}</span>
         <div className="border">
           <div style={{ width: Meta * 2 }} className="bar"></div>
         </div>
       </div>
 
-      <div className="pokemon__CP" className="meta">
+      <div className="pokemon__CP">
         <span>Max CP: {pokemon.maxCP}</span>
         <div className="border">
           <div style={{ width: Meta * 2 }} className="bar"></div>

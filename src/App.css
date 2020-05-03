@@ -102,13 +102,14 @@ img {
 
 .pokemon__HP {
   grid-area: HP;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 22px;
+  text-align: center;
 }
 
 .pokemon__CP {
   grid-area: CP;
-}
-
-.meta {
   margin: auto;
   margin-top: 10px;
   font-size: 22px;

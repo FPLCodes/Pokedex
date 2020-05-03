@@ -24,6 +24,7 @@ export function PokedexContainer() {
           <img
             src="https://pngimg.com/uploads/pokeball/pokeball_PNG8.png"
             width="150px"
+            alt="Pokeball"
             className="pokeball"
           />
         </div>
